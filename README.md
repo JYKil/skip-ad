@@ -1,4 +1,4 @@
-# skip-add
+# skip-ad
 
 특정 사이트에서 동영상 재생 전 삽입되는 광고를 자동으로 건너뛰는 **Safari Web Extension** 프로젝트입니다. iOS와 macOS를 모두 지원합니다.
 
