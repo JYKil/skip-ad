@@ -63,6 +63,17 @@ skip-add/
    - **macOS**: Safari → 설정 → 확장 프로그램 → `skip-add` 체크
    - **iOS**: 설정 → Safari → 확장 프로그램 → `skip-add` 활성화
 
+## 아이패드(iOS 기기)에 배포하기 (TestFlight)
+
+Apple Developer Program 가입이 되어 있다면, App Store 정식 심사 없이 TestFlight 내부 테스트로 개인 기기에 바로 설치할 수 있습니다.
+
+1. Xcode에서 `skip-add (iOS)` 스킴 선택 후 **Product → Archive**로 아카이브 생성
+2. Organizer에서 **Distribute App → App Store Connect**로 업로드
+3. [App Store Connect](https://appstoreconnect.apple.com)에서 해당 앱의 **TestFlight → 내부 테스터**에 본인 Apple ID 추가
+4. 빌드 처리 완료 후, 아이패드의 **TestFlight 앱**에서 바로 설치 (심사 불필요, 몇 분~몇십 분 내 처리)
+
+> ⚠️ 외부 테스터(공개 링크)로 배포할 경우에는 Beta App Review(간이 심사)를 거쳐야 하며 최초 빌드는 24~48시간 정도 소요될 수 있습니다.
+
 ## 대상 사이트 설정
 
 기본 매니페스트는 프라이버시를 위해 `*://example.com/*` 플레이스홀더로 설정되어 있습니다. 실제로 사용하려면 `Shared (Extension)/Resources/manifest.json`의 `content_scripts.matches` 값을 본인이 원하는 사이트 패턴으로 교체한 뒤 다시 빌드하세요.
