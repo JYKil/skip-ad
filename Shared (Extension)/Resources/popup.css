@@ -3,13 +3,54 @@
 }
 
 body {
-    width: 100px;
+    width: 260px;
     padding: 10px;
 
     font-family: system-ui;
     text-align: center;
 }
 
+.add-site {
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+.add-site input {
+    flex: 1;
+    min-width: 0;
+}
+
+.error {
+    color: #d33;
+    font-size: 12px;
+    margin: 6px 0 0;
+}
+
+ul#siteList {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    text-align: left;
+}
+
+ul#siteList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    padding: 4px 0;
+    font-size: 13px;
+}
+
+ul#siteList li span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 @media (prefers-color-scheme: dark) {
-    /* Dark Mode styles go here. */
+    .error {
+        color: #f77;
+    }
 }
